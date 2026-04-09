@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fahrschule G&R in Eppingen und Gemmingen – Deine Fahrschule für alle Führerscheinklassen seit 1990. PKW, Motorrad, LKW und mehr.">
+  <title>Fahrschule G&R Eppingen – Deine Fahrschule seit 1990</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap&subset=latin-ext" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── Toast ─────────────────────────────────────── -->
+<div class="toast" id="toast" role="alert" aria-live="polite">
+  <div class="toast__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+  </div>
+  <div>
+    <div class="toast__title"></div>
+    <p class="toast__text"></p>
+  </div>
+</div>
+
+<!-- ── Navigation ────────────────────────────────── -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Fahrschule G&R – Startseite">
+        <img src="https://fahrschule-gundr.de/images/Bilder/GR_Logo.jpg"
+             alt="Fahrschule G&R Logo"
+             class="nav__logo-img"
+             onerror="this.style.display='none'">
+        <div class="nav__logo-text">
+          Fahrschule G&R
+          <span>Eppingen &amp; Gemmingen</span>
+        </div>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"        class="nav__link is-active">Home</a></li>
+        <li><a href="team.html"         class="nav__link">Unser Team</a></li>
+        <li><a href="fuehrerschein.html" class="nav__link">Führerschein</a></li>
+        <li><a href="fahrzeuge.html"    class="nav__link">Fahrzeuge</a></li>
+        <li><a href="erste-hilfe.html"  class="nav__link">Erste Hilfe</a></li>
+        <li><a href="partner.html"      class="nav__link">Partner</a></li>
+        <li><a href="beratung.html"     class="nav__link">Beratung</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle-nav" aria-label="Farbschema wechseln">
+          <svg width="20" height="20" class="icon-sun" style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg width="20" height="20" class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <a href="anmeldung.html" class="nav__cta">Jetzt anmelden</a>
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Mobile Nav ─────────────────────────────────── -->
+<div class="nav-overlay" id="nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+  <a href="index.html"         class="mobile-nav__link">Home</a>
+  <a href="team.html"          class="mobile-nav__link">Unser Team</a>
+  <a href="fuehrerschein.html" class="mobile-nav__link">Führerschein</a>
+  <a href="fahrzeuge.html"     class="mobile-nav__link">Fahrzeuge</a>
+  <a href="erste-hilfe.html"   class="mobile-nav__link">Erste Hilfe</a>
+  <a href="partner.html"       class="mobile-nav__link">Partner</a>
+  <a href="beratung.html"      class="mobile-nav__link">Beratung</a>
+  <div class="mobile-nav__divider"></div>
+  <a href="anmeldung.html"     class="mobile-nav__cta">Jetzt anmelden</a>
+  <div class="mobile-nav__divider"></div>
+  <button class="theme-toggle" id="theme-toggle-mob" aria-label="Farbschema wechseln">
+    <svg class="icon-sun" style="display:none" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    <span>Farbschema</span>
+  </button>
+</nav>
+
+<!-- ── Hero Carousel ─────────────────────────────── -->
+<section class="hero" aria-label="Hero-Bereich">
+  <div class="hero__slides">
+
+    <!-- Slide 1 -->
+    <div class="hero__slide" role="group" aria-label="Folie 1 von 3">
+      <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80')" role="img" aria-label="Fahrer am Steuer eines modernen PKW"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div class="hero__content-inner">
+          <span class="hero__eyebrow">Fahrschule G&amp;R — seit 1990</span>
+          <h1 class="hero__title">Deine Fahrschule in Eppingen</h1>
+          <p class="hero__sub">Persönliche Begleitung auf dem Weg zum Führerschein — erfahrene Fahrlehrer, moderner Fuhrpark, zwei Standorte.</p>
+          <div class="hero__cta-group">
+            <a href="anmeldung.html" class="btn btn-primary">Jetzt anmelden</a>
+            <a href="fuehrerschein.html" class="btn btn-outline">Führerscheinklassen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero__slide" role="group" aria-label="Folie 2 von 3">
+      <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80')" role="img" aria-label="Motorradfahrer auf freier Straße"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div class="hero__content-inner">
+          <span class="hero__eyebrow">Motorrad-Ausbildung</span>
+          <h1 class="hero__title">Führerschein für alle Klassen</h1>
+          <p class="hero__sub">PKW, Motorrad, LKW und mehr — wir bilden Dich in allen gängigen Führerscheinklassen aus.</p>
+          <div class="hero__cta-group">
+            <a href="fuehrerschein.html" class="btn btn-primary">Alle Klassen ansehen</a>
+            <a href="fahrzeuge.html" class="btn btn-outline">Unser Fuhrpark</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero__slide" role="group" aria-label="Folie 3 von 3">
+      <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1920&q=80')" role="img" aria-label="Freie Fernstraße bei Sonnenuntergang"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div class="hero__content-inner">
+          <span class="hero__eyebrow">Standorte Eppingen &amp; Gemmingen</span>
+          <h1 class="hero__title">Nah bei Dir — in deiner Region</h1>
+          <p class="hero__sub">Zwei Standorte in Eppingen und Gemmingen, bequem erreichbar — Theorie und Praxis aus einer Hand.</p>
+          <div class="hero__cta-group">
+            <a href="beratung.html" class="btn btn-primary">Beratungsgespräch</a>
+            <a href="team.html" class="btn btn-outline">Unser Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Dots -->
+  <div class="hero__dots" role="tablist" aria-label="Carousel-Navigation">
+    <button class="hero__dot" role="tab" aria-label="Folie 1"></button>
+    <button class="hero__dot" role="tab" aria-label="Folie 2"></button>
+    <button class="hero__dot" role="tab" aria-label="Folie 3"></button>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="hero__scroll" aria-hidden="true">
+    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── Über uns ───────────────────────────────────── -->
+<section class="section" id="ueber-uns">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about__image-wrap reveal reveal--left">
+        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80"
+             alt="Fahrlehrer gibt einer Fahrschülerin Unterricht"
+             loading="lazy"
+             width="800" height="480">
+        <div class="about__badge">
+          <span>35+</span>
+          Jahre Erfahrung
+        </div>
+      </div>
+      <div class="about__content reveal reveal--right">
+        <span class="section__label">Über uns</span>
+        <h2>Deine Fahrschule in Eppingen und Gemmingen</h2>
+        <p>Die Kürzel G stehen für Grolig und R für Rothmeier. Die beiden Fahrschulinhaber schlossen im Jahre 1998 ihre Fahrschulen über eine Gesellschaft des Bürgerlichen Rechts zusammen (GdbR). Seit 01.04.2004 führt Peter Rothmeier die Fahrschule G&amp;R alleine.</p>
+        <p>Heute bilden unsere erfahrenen Fahrlehrer Dich in allen gängigen Führerscheinklassen aus — vom PKW über das Motorrad bis hin zum LKW. Mit zwei zentralen Standorten in Eppingen und Gemmingen sind wir nah bei Dir.</p>
+        <a href="team.html" class="btn btn-outline-dark mt-2">
+          Unser Team kennenlernen
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <div class="about__stats">
+          <div class="about__stat">
+            <div class="about__stat-value">35+</div>
+            <div class="about__stat-label">Jahre aktiv</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-value">2</div>
+            <div class="about__stat-label">Standorte</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-value">6</div>
+            <div class="about__stat-label">Fahrlehrer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Unser Service ──────────────────────────────── -->
+<section class="section section--alt" id="service">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Unser Service</span>
+      <h2 class="section__title">Was wir für Dich anbieten</h2>
+      <p class="section__sub">Hier können Sie sich zur Ausbildung anmelden. Wir werden uns zur Regelung der weiteren Formalitäten bei Ihnen melden.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal stagger-1">
+        <div class="service-card__icon">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1l3-3h6l3 3h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2Z"/><circle cx="12" cy="13" r="2"/></svg>
+        </div>
+        <div class="service-card__title">Anmeldung Ausbildung</div>
+        <p class="service-card__text">Hier können Sie sich zur Ausbildung anmelden. Wir melden uns zur Regelung der weiteren Formalitäten bei Ihnen.</p>
+        <a href="anmeldung.html" class="service-card__link">
+          Jetzt anmelden
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card reveal stagger-2">
+        <div class="service-card__icon">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+        </div>
+        <div class="service-card__title">Buchung Unterricht</div>
+        <p class="service-card__text">Hier sind Buchungen zum Unterricht (Online und Präsenz) möglich. Für unsere Fahrschüler besteht hier die Möglichkeit, sich zur theoretischen Ausbildung einzubuchen.</p>
+        <a href="anmeldung.html" class="service-card__link">
+          Zur Buchung
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card reveal stagger-3">
+        <div class="service-card__icon">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v5a2 2 0 0 1-2 2h-3"/><polyline points="9 17 9 22"/><polyline points="15 17 15 22"/><polyline points="7 22 17 22"/><circle cx="12" cy="12" r="1"/></svg>
+        </div>
+        <div class="service-card__title">Unser moderner PKW Fuhrpark</div>
+        <p class="service-card__text">Schauen Sie hier nach unseren aktuellen Fahrzeugen. Schaltgetriebe und Automatik — für alle Führerscheinklassen.</p>
+        <a href="fahrzeuge.html" class="service-card__link">
+          Zu den Autos
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card reveal stagger-4">
+        <div class="service-card__icon">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="m19 9-7-7-7 7"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="m8 22-1-6h10l-1 6"/></svg>
+        </div>
+        <div class="service-card__title">Unser moderner Motorrad Fuhrpark</div>
+        <p class="service-card__text">Schauen Sie hier nach unseren aktuellen Motorrädern — von Mofa bis Klasse A, für jeden Fahrtyp das passende Fahrzeug.</p>
+        <a href="fahrzeuge.html#motorrad" class="service-card__link">
+          Zu den Bikes
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Führerscheinklassen ────────────────────────── -->
+<section class="section" id="klassen">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Führerscheinklassen</span>
+      <h2 class="section__title">Wir bilden in allen Klassen aus</h2>
+      <p class="section__sub">Von PKW bis LKW, von Motorrad bis Traktor — wähle Deine Führerscheinklasse und wir begleiten Dich zum Ziel.</p>
+    </div>
+
+    <div class="classes-grid">
+      <div class="class-group reveal stagger-1">
+        <div class="class-group__icon">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V9l3-5h12l3 5v6a2 2 0 0 1-2 2h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg>
+        </div>
+        <div class="class-group__title">PKW-Klassen</div>
+        <div class="class-group__badges">
+          <a href="fuehrerschein.html" class="badge badge--accent">B</a>
+          <a href="fuehrerschein.html" class="badge">B96</a>
+          <a href="fuehrerschein.html" class="badge">BE</a>
+          <a href="fuehrerschein.html" class="badge">B197</a>
+        </div>
+      </div>
+
+      <div class="class-group reveal stagger-2">
+        <div class="class-group__icon">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
+        </div>
+        <div class="class-group__title">Motorrad-Klassen</div>
+        <div class="class-group__badges">
+          <a href="fuehrerschein.html" class="badge badge--accent">A</a>
+          <a href="fuehrerschein.html" class="badge">A2</a>
+          <a href="fuehrerschein.html" class="badge">A1</a>
+          <a href="fuehrerschein.html" class="badge">AM</a>
+          <a href="fuehrerschein.html" class="badge">Mofa</a>
+          <a href="fuehrerschein.html" class="badge">B196</a>
+        </div>
+      </div>
+
+      <div class="class-group reveal stagger-3">
+        <div class="class-group__icon">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="10" x="2" y="9" rx="2"/><path d="M6 9V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/><circle cx="8" cy="19" r="2"/><circle cx="16" cy="19" r="2"/></svg>
+        </div>
+        <div class="class-group__title">LKW-Klassen</div>
+        <div class="class-group__badges">
+          <a href="fuehrerschein.html" class="badge badge--accent">C</a>
+          <a href="fuehrerschein.html" class="badge">C1</a>
+          <a href="fuehrerschein.html" class="badge">C1E</a>
+          <a href="fuehrerschein.html" class="badge">CE</a>
+        </div>
+      </div>
+
+      <div class="class-group reveal stagger-4">
+        <div class="class-group__icon">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>
+        </div>
+        <div class="class-group__title">Land &amp; Forst</div>
+        <div class="class-group__badges">
+          <a href="fuehrerschein.html" class="badge badge--accent">L</a>
+          <a href="fuehrerschein.html" class="badge">T</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-3 reveal">
+      <a href="fuehrerschein.html" class="btn btn-outline-dark">
+        Alle Klassen im Detail
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Standorte ──────────────────────────────────── -->
+<section class="section section--alt" id="standorte">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Unsere Standorte</span>
+      <h2 class="section__title">Nah bei Dir — zwei Filialen</h2>
+      <p class="section__sub">Bequem erreichbar in Eppingen und Gemmingen. Theorie findet jeden Abend statt.</p>
+    </div>
+
+    <div class="locations-grid">
+      <div class="location-card reveal stagger-1">
+        <img src="https://www.fahrschule-gundr.de/images/Bilder/raeume/eppingen.jpg"
+             alt="Unterrichtsraum Eppingen, Bahnhofstraße 8"
+             class="location-card__img"
+             loading="lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=70';this.onerror=null;">
+        <div class="location-card__body">
+          <h3 class="location-card__name">Eppingen</h3>
+          <p class="location-card__address">Bahnhofstraße 8 · 75031 Eppingen<br>Eine Gehminute vom Eppinger Marktplatz oder drei Minuten vom Bahnhof entfernt.</p>
+          <div class="location-card__hours">
+            <div class="location-card__hours-row">
+              <span class="location-card__hours-label">Theorie</span>
+              <span class="location-card__hours-val">Mo, Di, Mi, Do · 19:00–20:30 Uhr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="location-card reveal stagger-2">
+        <img src="https://www.fahrschule-gundr.de/images/Bilder/raeume/gemmingen.jpg"
+             alt="Unterrichtsraum Gemmingen, Schwaigernerstraße 10"
+             class="location-card__img"
+             loading="lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=70';this.onerror=null;">
+        <div class="location-card__body">
+          <h3 class="location-card__name">Gemmingen</h3>
+          <p class="location-card__address">Schwaigernerstraße 10 · 75050 Gemmingen<br>Eine Gehminute vom Gemminger Rathaus oder vier Minuten vom Bahnhof entfernt.</p>
+          <div class="location-card__hours">
+            <div class="location-card__hours-row">
+              <span class="location-card__hours-label">Standort</span>
+              <span class="location-card__hours-val">Für Fahr- und Theorieunterricht</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Banner ─────────────────────────────────── -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner__inner">
+      <div class="reveal reveal--left">
+        <h2 class="cta-banner__title">Bereit für Deinen Führerschein?</h2>
+        <p class="cta-banner__sub">Melde Dich jetzt an und starte Deine Ausbildung bei Fahrschule G&amp;R.</p>
+      </div>
+      <div class="cta-banner__actions reveal reveal--right">
+        <a href="anmeldung.html" class="btn btn-outline">Jetzt anmelden</a>
+        <a href="beratung.html"  class="btn btn--secondary">Beratungsgespräch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Brand -->
+      <div class="footer__brand">
+        <img src="https://fahrschule-gundr.de/images/Bilder/GR_Logo.jpg"
+             alt="Fahrschule G&R Logo"
+             class="footer__logo"
+             onerror="this.style.display='none'">
+        <p class="footer__brand-desc">Deine Fahrschule in Eppingen und Gemmingen — persönlich, erfahren, zuverlässig seit 1990.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/fahrschulegundr" class="footer__social-link" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/fahrschule_gundr/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <div class="footer__col-title">Navigation</div>
+        <nav class="footer__nav" aria-label="Footer Navigation">
+          <a href="index.html"          class="footer__nav-link">Home</a>
+          <a href="team.html"           class="footer__nav-link">Unser Team</a>
+          <a href="fuehrerschein.html"  class="footer__nav-link">Führerschein</a>
+          <a href="fahrzeuge.html"      class="footer__nav-link">Fahrzeuge</a>
+          <a href="anmeldung.html"      class="footer__nav-link">Anmeldung</a>
+          <a href="beratung.html"       class="footer__nav-link">Beratung</a>
+          <a href="partner.html"        class="footer__nav-link">Partner</a>
+          <a href="erste-hilfe.html"    class="footer__nav-link">Erste Hilfe</a>
+        </nav>
+      </div>
+
+      <!-- Filialen -->
+      <div>
+        <div class="footer__col-title">Filialen</div>
+        <div class="footer__contact-item">
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p class="footer__contact-text">Bahnhofstraße 8<br>75031 Eppingen</p>
+        </div>
+        <div class="footer__contact-item">
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p class="footer__contact-text">Schwaigernerstraße 10<br>75050 Gemmingen</p>
+        </div>
+        <div class="footer__contact-item">
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <p class="footer__contact-text">Mo–Do · 19:00–20:30 Uhr<br>(Theorie Eppingen)</p>
+        </div>
+      </div>
+
+      <!-- Kontakt -->
+      <div>
+        <div class="footer__col-title">Kontakt</div>
+        <div class="footer__contact-item">
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          <p class="footer__contact-text"><a href="tel:+4972624826">+49 (0) 7262 4826</a></p>
+        </div>
+        <div class="footer__contact-item">
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <p class="footer__contact-text"><a href="mailto:info@fahrschule-gundr.de">info@fahrschule-gundr.de</a></p>
+        </div>
+        <div class="footer__contact-item">
+          <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/></svg>
+          <p class="footer__contact-text">Südring 3<br>75031 Eppingen</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <p class="footer__copy">© 2025 Fahrschule G&amp;R Eppingen · Inhaber: Peter und Dennis Rothmeier GbR</p>
+        <nav class="footer__legal-links" aria-label="Rechtliche Links">
+          <a href="impressum.html"   class="footer__legal-link">Impressum</a>
+          <a href="datenschutz.html" class="footer__legal-link">Datenschutz</a>
+          <a href="https://fahrschule-gundr.de/images/AGBs_2016.pdf" class="footer__legal-link" target="_blank" rel="noopener">AGB</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/navigation.js"></script>
+</body>
+</html>
+

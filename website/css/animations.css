@@ -1,0 +1,107 @@
+/* ===================================================
+   Fahrschule G&R — Animations & Scroll Reveals
+   =================================================== */
+
+/* ── Keyframes ──────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes kenBurns {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(1.08); }
+}
+
+@keyframes heroTextFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 59, 26, 0.5); }
+  50%       { box-shadow: 0 0 0 8px rgba(224, 59, 26, 0); }
+}
+
+/* ── Scroll-reveal base ────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.reveal--left {
+  transform: translateX(-40px);
+}
+
+.reveal.reveal--right {
+  transform: translateX(40px);
+}
+
+.reveal.reveal--scale {
+  transform: scale(0.92);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Stagger delays ────────────────────────────── */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.19s; }
+.stagger-4 { transition-delay: 0.26s; }
+.stagger-5 { transition-delay: 0.33s; }
+.stagger-6 { transition-delay: 0.40s; }
+
+/* ── Ken Burns on hero slides ───────────────────── */
+.hero__slide.is-active .hero__bg {
+  animation: kenBurns 8s ease-out forwards;
+}
+
+/* ── Crossfade transition ───────────────────────── */
+.hero__slide {
+  opacity: 0;
+  transition: opacity 1.6s ease;
+  pointer-events: none;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Hero content entry ─────────────────────────── */
+.hero__slide.is-active .hero__eyebrow {
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+.hero__slide.is-active .hero__title {
+  animation: fadeUp 0.8s ease 0.5s both;
+}
+.hero__slide.is-active .hero__sub {
+  animation: fadeUp 0.8s ease 0.7s both;
+}
+.hero__slide.is-active .hero__cta-group {
+  animation: fadeUp 0.8s ease 0.9s both;
+}

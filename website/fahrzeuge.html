@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unser moderner Fuhrpark – PKW und Motorräder bei Fahrschule G&R Eppingen. VW-Fahrzeuge und moderne Motorräder aller Klassen.">
+  <title>Fahrzeuge &amp; Fuhrpark – Fahrschule G&R Eppingen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="toast" id="toast" role="alert"><div class="toast__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="toast__title"></div><p class="toast__text"></p></div></div>
+
+<nav class="nav" id="main-nav" style="background-color:var(--nav-bg);">
+  <div class="container"><div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="https://fahrschule-gundr.de/images/Bilder/GR_Logo.jpg" alt="G&R Logo" class="nav__logo-img" onerror="this.style.display='none'"><div class="nav__logo-text">Fahrschule G&R<span>Eppingen &amp; Gemmingen</span></div></a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html"         class="nav__link">Home</a></li>
+      <li><a href="team.html"          class="nav__link">Unser Team</a></li>
+      <li><a href="fuehrerschein.html" class="nav__link">Führerschein</a></li>
+      <li><a href="fahrzeuge.html"     class="nav__link is-active">Fahrzeuge</a></li>
+      <li><a href="erste-hilfe.html"   class="nav__link">Erste Hilfe</a></li>
+      <li><a href="partner.html"       class="nav__link">Partner</a></li>
+      <li><a href="beratung.html"      class="nav__link">Beratung</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="theme-toggle-nav" aria-label="Farbschema"><svg width="20" height="20" class="icon-sun" style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><svg width="20" height="20" class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+      <a href="anmeldung.html" class="nav__cta">Jetzt anmelden</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></button>
+    </div>
+  </div></div>
+</nav>
+<div class="nav-overlay" id="nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html"         class="mobile-nav__link">Home</a>
+  <a href="team.html"          class="mobile-nav__link">Unser Team</a>
+  <a href="fuehrerschein.html" class="mobile-nav__link">Führerschein</a>
+  <a href="fahrzeuge.html"     class="mobile-nav__link">Fahrzeuge</a>
+  <a href="erste-hilfe.html"   class="mobile-nav__link">Erste Hilfe</a>
+  <a href="partner.html"       class="mobile-nav__link">Partner</a>
+  <a href="beratung.html"      class="mobile-nav__link">Beratung</a>
+  <div class="mobile-nav__divider"></div>
+  <a href="anmeldung.html" class="mobile-nav__cta">Jetzt anmelden</a>
+</nav>
+
+<header class="page-hero">
+  <div class="container"><div class="page-hero__inner">
+    <span class="section__label">Unser Fuhrpark</span>
+    <h1 class="page-hero__title">Fahrzeuge</h1>
+    <p class="page-hero__sub">Unsere modernen PKW und Motorräder für Deine Ausbildung — aktuell, sicher und komfortabel.</p>
+  </div></div>
+</header>
+
+<!-- Tabs -->
+<section class="section" id="pkw">
+  <div class="container">
+    <div class="fleet-tabs reveal">
+      <button class="fleet-tab is-active" data-target="panel-pkw">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V9l3-5h12l3 5v6a2 2 0 0 1-2 2h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg>
+        PKW
+      </button>
+      <button class="fleet-tab" data-target="panel-motorrad" id="motorrad">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
+        Motorrad &amp; Zweirad
+      </button>
+    </div>
+
+    <!-- PKW Panel -->
+    <div class="fleet-panel is-active" id="panel-pkw">
+      <div class="section__header" style="margin-bottom:2rem;">
+        <h2>Unsere modernen Fahrzeuge für Euch</h2>
+        <p class="section__sub">Schaltgetriebe und Automatik — für alle Führerscheinklassen.</p>
+      </div>
+      <div class="fleet-grid">
+
+        <div class="fleet-card reveal stagger-1">
+          <img src="https://fahrschule-gundr.de/images/Bilder/PKW/t-roc.jpg"
+               alt="VW T-Roc" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">B</span><span class="badge">BE</span></div>
+            <div class="fleet-card__name">VW T-Roc</div>
+            <p class="fleet-card__note">Besonderheit: Schaltgetriebe</p>
+          </div>
+        </div>
+
+        <div class="fleet-card reveal stagger-2">
+          <img src="https://fahrschule-gundr.de/images/Bilder/PKW/golf_21.jpg"
+               alt="VW Golf VIII" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">B</span><span class="badge">BE</span></div>
+            <div class="fleet-card__name">VW Golf VIII</div>
+            <p class="fleet-card__note">Besonderheit: Schaltgetriebe</p>
+          </div>
+        </div>
+
+        <div class="fleet-card reveal stagger-3">
+          <img src="https://fahrschule-gundr.de/images/Bilder/PKW/tiguan.jpg"
+               alt="VW Tiguan" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">B</span><span class="badge">BE</span></div>
+            <div class="fleet-card__name">VW Tiguan</div>
+            <p class="fleet-card__note">Besonderheit: Schaltgetriebe</p>
+          </div>
+        </div>
+
+        <div class="fleet-card reveal stagger-4">
+          <img src="https://fahrschule-gundr.de/images/Bilder/PKW/vwtcross.jpg"
+               alt="VW T-Cross" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">B197/78</span></div>
+            <div class="fleet-card__name">VW T-Cross</div>
+            <p class="fleet-card__note">Besonderheit: Automatik</p>
+          </div>
+        </div>
+
+        <div class="fleet-card reveal stagger-5">
+          <img src="https://fahrschule-gundr.de/images/2026/03/23/whatsapp-image-2026-03-09-at-15.44.46.jpeg"
+               alt="VW Taigo" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">B197/78</span></div>
+            <div class="fleet-card__name">VW Taigo</div>
+            <p class="fleet-card__note">Besonderheit: Automatik</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Motorrad Panel -->
+    <div class="fleet-panel" id="panel-motorrad">
+      <div class="section__header" style="margin-bottom:2rem;">
+        <h2>Unsere Motorräder für Euch</h2>
+        <p class="section__sub">Von Mofa bis Klasse A — moderne Motorräder für jede Führerscheinklasse.</p>
+      </div>
+      <div class="fleet-grid">
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/HondaCB750.jpg"
+               alt="Honda CB 750 Hornet" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A</span></div>
+            <div class="fleet-card__name">Honda CB 750 Hornet</div>
+            <p class="fleet-card__note">Sitzhöhe 795 mm · ABS · Traktionskontrolle · Schaltautomat · Griffheizung</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/jamaha_mt07.jpg"
+               alt="Yamaha MT 07" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A</span></div>
+            <div class="fleet-card__name">Yamaha MT 07</div>
+            <p class="fleet-card__note">Sitzhöhe 805 mm · Tieferlegung 40 mm</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/f600_gs.jpg"
+               alt="BMW F 650 GS Klasse A" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A</span></div>
+            <div class="fleet-card__name">BMW F 650 GS</div>
+            <p class="fleet-card__note">Sitzhöhe 780 mm · Höhenverstellbare Sitzbank</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/f600_gs2.jpg"
+               alt="BMW F 650 GS Klasse A2" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A2</span></div>
+            <div class="fleet-card__name">BMW F 650 GS</div>
+            <p class="fleet-card__note">Sitzhöhe 780 mm · Höhenverstellbare Sitzbank</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/hondacb500.jpg"
+               alt="Honda CB 500 Hornet" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A2</span></div>
+            <div class="fleet-card__name">Honda CB 500 Hornet</div>
+            <p class="fleet-card__note">Sitzhöhe 785 mm · ABS · Traktionskontrolle · Griffheizung</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/kawasaki.jpg"
+               alt="Kawasaki Z400" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A2</span></div>
+            <div class="fleet-card__name">Kawasaki Z400</div>
+            <p class="fleet-card__note">Sitzhöhe 785 mm · Tieferlegung 40 mm</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/hondacb125.jpg"
+               alt="Honda CB 125 R" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A1</span><span class="badge">B196</span></div>
+            <div class="fleet-card__name">Honda CB 125 R</div>
+            <p class="fleet-card__note">Sitzhöhe 796 mm · ABS</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/honda_2.jpg"
+               alt="Honda MSX 125" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A1</span><span class="badge">B196</span></div>
+            <div class="fleet-card__name">Honda MSX 125</div>
+            <p class="fleet-card__note">Sitzhöhe 761 mm</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/duke.jpg"
+               alt="KTM Duke 125" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A1</span><span class="badge">B196</span></div>
+            <div class="fleet-card__name">KTM Duke 125</div>
+            <p class="fleet-card__note">Sitzhöhe 830 mm</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/kisbee_2.jpg"
+               alt="Peugeot Kisbee 50" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">AM</span></div>
+            <div class="fleet-card__name">Peugeot Kisbee 50</div>
+            <p class="fleet-card__note">Kleinkraftrad</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/piaggio_NRG.jpg"
+               alt="Piaggio NRG 50" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">Mofa</span></div>
+            <div class="fleet-card__name">Piaggio NRG 50</div>
+            <p class="fleet-card__note">Mofa-Drossel 25 km/h</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/bmw_s1000r.jpg"
+               alt="BMW S1000R Begleitfahrzeug" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A</span></div>
+            <div class="fleet-card__name">BMW S1000R</div>
+            <p class="fleet-card__note">Begleitfahrzeug</p>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://www.fahrschule-gundr.de/images/Bilder/motorrad/BMW_1200_gs.jpg"
+               alt="BMW R 1200 GS Begleitfahrzeug" class="fleet-card__img" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';this.onerror=null;">
+          <div class="fleet-card__body">
+            <div class="fleet-card__classes"><span class="badge badge--accent">A</span></div>
+            <div class="fleet-card__name">BMW R 1200 GS</div>
+            <p class="fleet-card__note">Begleitfahrzeug</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand"><img src="https://fahrschule-gundr.de/images/Bilder/GR_Logo.jpg" alt="G&R Logo" class="footer__logo" onerror="this.style.display='none'"><p class="footer__brand-desc">Deine Fahrschule in Eppingen und Gemmingen — seit 1990.</p><div class="footer__social"><a href="https://www.facebook.com/fahrschulegundr" class="footer__social-link" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/fahrschule_gundr/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a></div></div>
+      <div><div class="footer__col-title">Navigation</div><nav class="footer__nav"><a href="index.html" class="footer__nav-link">Home</a><a href="team.html" class="footer__nav-link">Unser Team</a><a href="fuehrerschein.html" class="footer__nav-link">Führerschein</a><a href="fahrzeuge.html" class="footer__nav-link">Fahrzeuge</a><a href="anmeldung.html" class="footer__nav-link">Anmeldung</a><a href="beratung.html" class="footer__nav-link">Beratung</a><a href="partner.html" class="footer__nav-link">Partner</a><a href="erste-hilfe.html" class="footer__nav-link">Erste Hilfe</a></nav></div>
+      <div><div class="footer__col-title">Filialen</div><div class="footer__contact-item"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><p class="footer__contact-text">Bahnhofstraße 8 · 75031 Eppingen</p></div><div class="footer__contact-item"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><p class="footer__contact-text">Schwaigernerstraße 10 · 75050 Gemmingen</p></div></div>
+      <div><div class="footer__col-title">Kontakt</div><div class="footer__contact-item"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg><p class="footer__contact-text"><a href="tel:+4972624826">+49 (0) 7262 4826</a></p></div><div class="footer__contact-item"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><p class="footer__contact-text"><a href="mailto:info@fahrschule-gundr.de">info@fahrschule-gundr.de</a></p></div></div>
+    </div>
+  </div>
+  <div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copy">© 2025 Fahrschule G&amp;R Eppingen · Inhaber: Peter und Dennis Rothmeier GbR</p><nav class="footer__legal-links"><a href="impressum.html" class="footer__legal-link">Impressum</a><a href="datenschutz.html" class="footer__legal-link">Datenschutz</a><a href="https://fahrschule-gundr.de/images/AGBs_2016.pdf" class="footer__legal-link" target="_blank" rel="noopener">AGB</a></nav></div></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/navigation.js"></script>
+
+<!-- Auto-open motorrad panel if hash is set -->
+<script>
+  if (window.location.hash === '#motorrad') {
+    document.querySelector('[data-target="panel-motorrad"]').click();
+  }
+</script>
+</body>
+</html>
+

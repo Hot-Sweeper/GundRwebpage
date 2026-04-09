@@ -1,0 +1,79 @@
+﻿/* ===================================================
+   Fahrschule G&R — CSS Custom Properties (Brutalist)
+   =================================================== */
+
+:root {
+  /* LIGHT MODE DEFAULT */
+  --bg-primary:   #ffffff;
+  --bg-secondary: #f0f0f0;
+  --bg-card:      #ffffff;
+
+  --nav-bg:        #ffffff;
+  --nav-bg-scroll: #ffffff;
+  
+  --footer-bg:     #111111;
+  --footer-surface:#1a1a1a;
+
+  --accent:       #bcee00;
+  --accent-hover: #a5d100;
+  --accent-dark:  #7b9c00;
+  --accent-light: rgba(188, 238, 0, 0.2);
+  --accent-text:  #000000; /* Black text on lime green */
+
+  --text-accent:    #000000;
+  --text-primary:   #000000;
+  --text-secondary: #333333;
+  --text-muted:     #666666;
+  --text-nav:       #000000;
+  --text-footer:    #ffffff;
+
+  --border:        #000000;
+  --border-nav:    #000000;
+  --border-focus:  #000000;
+  
+  --shadow-color:  #000000;
+  /* Hard brutalist shadows */
+  --shadow-sm:     3px 3px 0 var(--shadow-color);
+  --shadow-md:     5px 5px 0 var(--shadow-color);
+  --shadow-lg:     8px 8px 0 var(--shadow-color);
+  --shadow-card:   6px 6px 0 var(--shadow-color);
+  --shadow-card-hover: 12px 12px 0 var(--shadow-color);
+
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  --radius-sm:   0px;
+  --radius-md:   0px;
+  --radius-lg:   0px;
+  --radius-full: 0px;
+
+  --transition-fast:   100ms linear;
+  --transition-base:   150ms linear;
+  --transition-slow:   200ms linear;
+}
+
+[data-theme="dark"] {
+  /* DARK MODE */
+  --bg-primary:   #000000;
+  --bg-secondary: #111111;
+  --bg-card:      #111111;
+
+  --nav-bg:        #000000;
+  --nav-bg-scroll: #000000;
+
+  --text-accent:    var(--accent);
+  --text-primary:   #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted:     #888888;
+  --text-nav:       #ffffff;
+  
+  --border:        #ffffff;
+  --border-nav:    #ffffff;
+  --border-focus:  #ffffff;
+
+  --shadow-color:  var(--accent); /* the pop color in dark mode */
+}

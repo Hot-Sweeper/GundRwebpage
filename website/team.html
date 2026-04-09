@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unser erfahrenes Team bei Fahrschule G&R Eppingen – Fahrlehrer mit jahrzehntelanger Erfahrung in allen Führerscheinklassen.">
+  <title>Unser Team – Fahrschule G&R Eppingen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap&subset=latin-ext" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+<div class="toast" id="toast" role="alert">
+  <div class="toast__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+  <div><div class="toast__title"></div><p class="toast__text"></p></div>
+</div>
+
+<nav class="nav" id="main-nav" style="background-color:var(--nav-bg);">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="https://fahrschule-gundr.de/images/Bilder/GR_Logo.jpg" alt="Fahrschule G&R Logo" class="nav__logo-img" onerror="this.style.display='none'">
+        <div class="nav__logo-text">Fahrschule G&R<span>Eppingen &amp; Gemmingen</span></div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"         class="nav__link">Home</a></li>
+        <li><a href="team.html"          class="nav__link is-active">Unser Team</a></li>
+        <li><a href="fuehrerschein.html" class="nav__link">Führerschein</a></li>
+        <li><a href="fahrzeuge.html"     class="nav__link">Fahrzeuge</a></li>
+        <li><a href="erste-hilfe.html"   class="nav__link">Erste Hilfe</a></li>
+        <li><a href="partner.html"       class="nav__link">Partner</a></li>
+        <li><a href="beratung.html"      class="nav__link">Beratung</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle-nav" aria-label="Farbschema wechseln">
+          <svg width="20" height="20" class="icon-sun" style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg width="20" height="20" class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <a href="anmeldung.html" class="nav__cta">Jetzt anmelden</a>
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html"         class="mobile-nav__link">Home</a>
+  <a href="team.html"          class="mobile-nav__link">Unser Team</a>
+  <a href="fuehrerschein.html" class="mobile-nav__link">Führerschein</a>
+  <a href="fahrzeuge.html"     class="mobile-nav__link">Fahrzeuge</a>
+  <a href="erste-hilfe.html"   class="mobile-nav__link">Erste Hilfe</a>
+  <a href="partner.html"       class="mobile-nav__link">Partner</a>
+  <a href="beratung.html"      class="mobile-nav__link">Beratung</a>
+  <div class="mobile-nav__divider"></div>
+  <a href="anmeldung.html"     class="mobile-nav__cta">Jetzt anmelden</a>
+</nav>
+
+<!-- Page Hero -->
+<header class="page-hero">
+  <div class="container">
+    <div class="page-hero__inner">
+      <span class="section__label">Fahrschule G&amp;R</span>
+      <h1 class="page-hero__title">Unser Team</h1>
+      <p class="page-hero__sub">Erfahrene Fahrlehrer mit Leidenschaft — wir begleiten Dich sicher zum Führerschein.</p>
+    </div>
+  </div>
+</header>
+
+<!-- Team — Fahrlehrer -->
+<section class="section">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Fahrlehrer</span>
+      <h2 class="section__title">Deine Fahrlehrer</h2>
+      <p class="section__sub">Unser erfahrenes Team begleitet Dich auf dem Weg zum Führerschein — persönlich, geduldig und kompetent.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card team-card--peter reveal stagger-1" tabindex="0">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-card__visual">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/Peter_1600x900_ohne_Rahmen.jpg"
+                   alt="Peter Rothmeier"
+                   class="team-card__photo"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__photo-placeholder" style="display:none;">PR</div>
+              <div class="team-card__role-icon team-card__role-icon--owner" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__eyebrow">Inhaber &amp; Fahrlehrer</div>
+              <div class="team-card__name">Peter Rothmeier</div>
+              <div class="team-card__hint">Hover für Details</div>
+            </div>
+          </div>
+          <div class="team-card-back">
+            <div class="team-card__back-head">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/Peter_1600x900_ohne_Rahmen.jpg"
+                   alt="Peter Rothmeier"
+                   class="team-card__avatar"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__avatar team-card__avatar--fallback" style="display:none;">PR</div>
+              <div>
+                <div class="team-card__name">Peter Rothmeier</div>
+                <div class="team-card__role">Inhaber &amp; Fahrlehrer</div>
+              </div>
+            </div>
+            <p class="team-card__classes">Klassen: B, B96, BE, Mofa, AM, A1, B196, A2, A, L</p>
+            <ul class="team-card__list">
+              <li>ASF-Seminarleiter</li>
+              <li>Ausbildungsfahrlehrer für Fahrlehrer im Praktikum</li>
+              <li>Instruktor für Motorradsicherheitstraining</li>
+            </ul>
+            <p class="team-card__since">Fahrlehrer seit April 1990</p>
+            <a href="tel:016090860033" class="team-card__phone">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+              0160 90860033
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card team-card--dennis reveal stagger-2" tabindex="0">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-card__visual">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/Dennis_1600x900_ohne_Rahmen.jpg"
+                   alt="Dennis Rothmeier"
+                   class="team-card__photo"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__photo-placeholder" style="display:none;">DR</div>
+              <div class="team-card__role-icon team-card__role-icon--teacher" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__eyebrow">Fahrlehrer</div>
+              <div class="team-card__name">Dennis Rothmeier</div>
+              <div class="team-card__hint">Hover für Details</div>
+            </div>
+          </div>
+          <div class="team-card-back">
+            <div class="team-card__back-head">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/Dennis_1600x900_ohne_Rahmen.jpg"
+                   alt="Dennis Rothmeier"
+                   class="team-card__avatar"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__avatar team-card__avatar--fallback" style="display:none;">DR</div>
+              <div>
+                <div class="team-card__name">Dennis Rothmeier</div>
+                <div class="team-card__role">Fahrlehrer</div>
+              </div>
+            </div>
+            <p class="team-card__classes">Klassen: B, B96, BE, Mofa, AM, A1, B196, A2, A, L</p>
+            <ul class="team-card__list">
+              <li>Instruktor für Motorradsicherheitstraining</li>
+            </ul>
+            <p class="team-card__since">Fahrlehrer seit September 2009</p>
+            <a href="tel:017662659792" class="team-card__phone">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+              0176 62659792
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card team-card--claus reveal stagger-3" tabindex="0">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-card__visual">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/claus_1600x900_ohne_rahmen.jpg"
+                   alt="Claus Altzweig"
+                   class="team-card__photo"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__photo-placeholder" style="display:none;">CA</div>
+              <div class="team-card__role-icon team-card__role-icon--teacher" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__eyebrow">Fahrlehrer</div>
+              <div class="team-card__name">Claus Altzweig</div>
+              <div class="team-card__hint">Hover für Details</div>
+            </div>
+          </div>
+          <div class="team-card-back">
+            <div class="team-card__back-head">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/claus_1600x900_ohne_rahmen.jpg"
+                   alt="Claus Altzweig"
+                   class="team-card__avatar"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__avatar team-card__avatar--fallback" style="display:none;">CA</div>
+              <div>
+                <div class="team-card__name">Claus Altzweig</div>
+                <div class="team-card__role">Fahrlehrer</div>
+              </div>
+            </div>
+            <p class="team-card__classes">Klassen: B, BE</p>
+            <ul class="team-card__list">
+              <li>Langjährige Ausbildungserfahrung</li>
+            </ul>
+            <p class="team-card__since">Fahrlehrer seit November 1989</p>
+            <a href="tel:01773315254" class="team-card__phone">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+              0177 3315254
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card team-card--sascha reveal stagger-4" tabindex="0">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-card__visual">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/sascha_1600x900_ohne_rahmen.jpg"
+                   alt="Sascha Dorst"
+                   class="team-card__photo"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__photo-placeholder" style="display:none;">SD</div>
+              <div class="team-card__role-icon team-card__role-icon--teacher" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__eyebrow">Fahrlehrer</div>
+              <div class="team-card__name">Sascha Dorst</div>
+              <div class="team-card__hint">Hover für Details</div>
+            </div>
+          </div>
+          <div class="team-card-back">
+            <div class="team-card__back-head">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/sascha_1600x900_ohne_rahmen.jpg"
+                   alt="Sascha Dorst"
+                   class="team-card__avatar"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__avatar team-card__avatar--fallback" style="display:none;">SD</div>
+              <div>
+                <div class="team-card__name">Sascha Dorst</div>
+                <div class="team-card__role">Fahrlehrer</div>
+              </div>
+            </div>
+            <p class="team-card__classes">Klassen: B, BE</p>
+            <ul class="team-card__list">
+              <li>Schwerpunkt PKW und Anhänger</li>
+            </ul>
+            <p class="team-card__since">Fahrlehrer seit März 2018</p>
+            <a href="tel:01791400758" class="team-card__phone">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+              0179 1400758
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</section>
+
+<!-- Backoffice -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Büro &amp; Verwaltung</span>
+      <h2 class="section__title">Unser Büro-Team</h2>
+      <p class="section__sub">Das Backoffice hält Anmeldung, Theorie und Organisation im Takt.</p>
+    </div>
+
+    <div class="team-grid team-grid--office">
+      <div class="team-card team-card--annette reveal stagger-1" tabindex="0">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-card__visual">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/Annette_1600x900_ohne_Rahmen.jpg"
+                   alt="Annette Rothmeier"
+                   class="team-card__photo"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__photo-placeholder" style="display:none;">AR</div>
+              <div class="team-card__role-icon team-card__role-icon--backoffice" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__eyebrow">Backoffice</div>
+              <div class="team-card__name">Annette Rothmeier</div>
+              <div class="team-card__hint">Hover für Details</div>
+            </div>
+          </div>
+          <div class="team-card-back">
+            <div class="team-card__back-head">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/Annette_1600x900_ohne_Rahmen.jpg"
+                   alt="Annette Rothmeier"
+                   class="team-card__avatar"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__avatar team-card__avatar--fallback" style="display:none;">AR</div>
+              <div>
+                <div class="team-card__name">Annette Rothmeier</div>
+                <div class="team-card__role">Backoffice</div>
+              </div>
+            </div>
+            <p class="team-card__classes">Schwerpunkt: Buchhaltung und Organisation</p>
+            <ul class="team-card__list">
+              <li>Verwaltung und Büroabläufe</li>
+              <li>Ansprechpartnerin im Hintergrund</li>
+            </ul>
+            <a href="tel:+4972624826" class="team-card__phone">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+              07262 48 26
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card team-card--kerstin reveal stagger-2" tabindex="0">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-card__visual">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/Kerstin_1600x900_ohne_Rahmen.jpg"
+                   alt="Kerstin Rothmeier"
+                   class="team-card__photo"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__photo-placeholder" style="display:none;">KR</div>
+              <div class="team-card__role-icon team-card__role-icon--frontoffice" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>
+              </div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__eyebrow">Front Office</div>
+              <div class="team-card__name">Kerstin Rothmeier</div>
+              <div class="team-card__hint">Hover für Details</div>
+            </div>
+          </div>
+          <div class="team-card-back">
+            <div class="team-card__back-head">
+              <img src="https://fahrschule-gundr.de/images/Bilder/fahrlehrer/Kerstin_1600x900_ohne_Rahmen.jpg"
+                   alt="Kerstin Rothmeier"
+                   class="team-card__avatar"
+                   loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="team-card__avatar team-card__avatar--fallback" style="display:none;">KR</div>
+              <div>
+                <div class="team-card__name">Kerstin Rothmeier</div>
+                <div class="team-card__role">Front Office</div>
+              </div>
+            </div>
+            <p class="team-card__classes">Organisation für den Einstieg in die Ausbildung</p>
+            <ul class="team-card__list">
+              <li>Anmeldungen</li>
+              <li>Theorieprüfung</li>
+              <li>Medien Management</li>
+            </ul>
+            <a href="tel:017620827550" class="team-card__phone">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+              0176 208 27 550
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Unsere Räume -->
+<section class="section">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Unsere Filialen</span>
+      <h2 class="section__title">Unsere Unterrichtsräume</h2>
+    </div>
+
+    <div class="locations-grid">
+      <div class="location-card reveal stagger-1">
+        <img src="https://www.fahrschule-gundr.de/images/Bilder/raeume/eppingen1.jpg"
+             alt="Unterrichtsraum Eppingen"
+             class="location-card__img"
+             loading="lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=70';this.onerror=null;">
+        <div class="location-card__body">
+          <h3 class="location-card__name">Bahnhofstr. 8 · 75031 Eppingen</h3>
+          <p class="location-card__address">Eine Gehminute vom Eppinger Marktplatz oder drei Minuten vom Bahnhof entfernt befindet sich unser Unterrichtsraum.</p>
+          <div class="location-card__hours">
+            <div class="location-card__hours-row">
+              <span class="location-card__hours-label">Unterricht</span>
+              <span class="location-card__hours-val">Mo, Mi, Do, Fr · 19:00–20:30 Uhr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="location-card reveal stagger-2">
+        <img src="https://www.fahrschule-gundr.de/images/Bilder/raeume/gemmingen1.jpg"
+             alt="Unterrichtsraum Gemmingen"
+             class="location-card__img"
+             loading="lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=70';this.onerror=null;">
+        <div class="location-card__body">
+          <h3 class="location-card__name">Schwaigernerstraße 10 · 75050 Gemmingen</h3>
+          <p class="location-card__address">Eine Gehminute vom Gemminger Rathaus oder vier Minuten vom Bahnhof entfernt befindet sich unser Unterrichtsraum.</p>
+          <div class="location-card__hours">
+            <div class="location-card__hours-row">
+              <span class="location-card__hours-label">Standort</span>
+              <span class="location-card__hours-val">Für Fahr- und Theorieunterricht</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (shared) -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="https://fahrschule-gundr.de/images/Bilder/GR_Logo.jpg" alt="Fahrschule G&R Logo" class="footer__logo" onerror="this.style.display='none'">
+        <p class="footer__brand-desc">Deine Fahrschule in Eppingen und Gemmingen — persönlich, erfahren, zuverlässig seit 1990.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/fahrschulegundr" class="footer__social-link" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/fahrschule_gundr/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Navigation</div>
+        <nav class="footer__nav"><a href="index.html" class="footer__nav-link">Home</a><a href="team.html" class="footer__nav-link">Unser Team</a><a href="fuehrerschein.html" class="footer__nav-link">Führerschein</a><a href="fahrzeuge.html" class="footer__nav-link">Fahrzeuge</a><a href="anmeldung.html" class="footer__nav-link">Anmeldung</a><a href="beratung.html" class="footer__nav-link">Beratung</a><a href="partner.html" class="footer__nav-link">Partner</a><a href="erste-hilfe.html" class="footer__nav-link">Erste Hilfe</a></nav>
+      </div>
+      <div>
+        <div class="footer__col-title">Filialen</div>
+        <div class="footer__contact-item"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><p class="footer__contact-text">Bahnhofstraße 8<br>75031 Eppingen</p></div>
+        <div class="footer__contact-item"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><p class="footer__contact-text">Schwaigernerstraße 10<br>75050 Gemmingen</p></div>
+      </div>
+      <div>
+        <div class="footer__col-title">Kontakt</div>
+        <div class="footer__contact-item"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13 19.79 19.79 0 0 1 1.07 4.4 2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg><p class="footer__contact-text"><a href="tel:+4972624826">+49 (0) 7262 4826</a></p></div>
+        <div class="footer__contact-item"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><p class="footer__contact-text"><a href="mailto:info@fahrschule-gundr.de">info@fahrschule-gundr.de</a></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <p class="footer__copy">© 2025 Fahrschule G&amp;R Eppingen · Inhaber: Peter und Dennis Rothmeier GbR</p>
+        <nav class="footer__legal-links"><a href="impressum.html" class="footer__legal-link">Impressum</a><a href="datenschutz.html" class="footer__legal-link">Datenschutz</a><a href="https://fahrschule-gundr.de/images/AGBs_2016.pdf" class="footer__legal-link" target="_blank" rel="noopener">AGB</a></nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/navigation.js"></script>
+</body>
+</html>
+
